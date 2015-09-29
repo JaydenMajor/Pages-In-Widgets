@@ -1,12 +1,19 @@
 # Pages In Widgets
 
 Contributors: jayden-major
+
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor
+
 Requires at least: 3.0
+
 Tested up to: 4.3
+
 Stable tag: stable
+
 License: GPLv2
+
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
 
 Pages In Widgets is a plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
 
