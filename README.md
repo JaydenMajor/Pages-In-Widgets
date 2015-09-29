@@ -54,18 +54,12 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 * **A.** I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
 
-
-== Screenshots ==
-1. Screenshot of the plugin working in a widget area.
-
-
 == Change Log ==
 = 1.2.1 =
 
 * Changed widget title form Page Widget -> Pages In Widget
 
 = 1.2 =
-
 Release Date: Aug 11, 2015
 
 * Bug Fix: Move away from using PHP 4 style constrictors - Needed for wordpress 4.3
