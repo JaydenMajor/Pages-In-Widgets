@@ -1,6 +1,6 @@
 # Pages In Widgets
 
-**Contributors:** jayden-major
+**Contributors:** jayden-major, ramiy
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
@@ -46,6 +46,13 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 
 
 ## Change Log
+
+### 1.3
+Release Date: Oct 16, 2015
+
+* Security: Prevent direct access to php files.
+* Security: Prevent direct access to directory.
+* i18n support: Add translation functions.
 
 ### 1.2.1
 
