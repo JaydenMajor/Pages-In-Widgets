@@ -41,7 +41,7 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 * **Q** Can this plugin also insert post into widgets
 * **A** Not at this stage but if the feature is requested i can be enabled.
 
-* **Q** Why did you developed this plugin
+* **Q** Why did you develop this plugin
 * **A** I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
 
