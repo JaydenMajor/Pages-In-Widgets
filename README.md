@@ -37,6 +37,11 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 4 The widget will ask you to select a page and if you want to display the page title
 5 Save the content for the selected page will now be included in the widget secti5
 
+### Install From Git Hub
+1 Download or clone from https://github.com/JaydenMajor/Pages-In-Widgets/
+2 The directoy pagesingwidgets is the you want to zip and upload or paste in you wp-plugins filder
+3 From this point on you can follow *Install Via Upload* Step 2 onward.
+
 ## Frequently Asked Questions
 * **Q** Can this plugin also insert post into widgets
 * **A** Not at this stage but if the feature is requested i can be enabled.
