@@ -1,6 +1,6 @@
 # Pages In Widgets
 
-**Contributors:** jayden-major, ramiy
+**Contributors:** jayden-major, ramiy, ethanpil
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
@@ -60,6 +60,11 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 
 
 ## Change Log
+
+### 1.4
+Realse Date: Nov 18, 2015
+
+*Added Custom class opton
 
 ### 1.3
 Release Date: Oct 16, 2015
