@@ -1,9 +1,9 @@
 === Pages In Widgets ===
-Contributors: jayden-major, ramiy
+Contributors: jayden-major, ramiy, ethanpil
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor
 Requires at least: 3.0
-Tested up to: 4.3
-Stable tag: 1.3
+Tested up to: 4.3.1
+Stable tag: 1.4
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -39,6 +39,11 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 1. Screenshot of the plugin working in a widget area.
 
 == Change Log ==
+= 1.4 =
+Realse Date: Nov 18, 2015
+
+*Added Custom class opton
+
 = 1.3 =
 Release Date: Oct 16, 2015
 

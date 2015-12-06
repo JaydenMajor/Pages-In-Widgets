@@ -70,7 +70,9 @@ class pagesinwidgets_page_section extends WP_Widget {
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-yes"><?php _e( 'Yes:', 'pagesinwidgets' ); ?> <input type="radio" value="true" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-yes" <?php if($currentInstance['titleEnable'] == 'true'){echo 'checked="checked"';} ?>/></label>
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-no"><?php _e( 'No:', 'pagesinwidgets' ); ?> <input type="radio" value="false" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-no" <?php if($currentInstance['titleEnable'] == 'false'){echo 'checked="checked"';} ?>/></label></p>
 		
-		
+		<p>	<label for="<?php echo $this->get_field_id('customCssClass'); ?>"><?php _e( 'CSS Class:', 'pagesinwidgets' ); ?></label>
+        <input id="<?php echo $this->get_field_id('customCssClass'); ?>" name="<?php echo $this->get_field_name('customCssClass'); ?>" value="<?php echo $currentInstance['customCssClass']; ?>">
+        </p>
 		<?php
 	}
 
@@ -78,6 +80,7 @@ class pagesinwidgets_page_section extends WP_Widget {
    		$instance = $old_instance;
     	$instance['pageID'] = $new_instance['pageID'];
 		$instance['titleEnable'] = $new_instance['titleEnable'];
+		$instance['customCssClass'] = $new_instance['customCssClass'];
     	return $instance;
     }
 
@@ -85,6 +88,7 @@ class pagesinwidgets_page_section extends WP_Widget {
 		extract($args, EXTR_SKIP);
 		$pageID = $instance['pageID'];
 		$titleEnable = $instance['titleEnable'];
+		$customCssClass = $instance['customCssClass'];
     	echo $before_widget;
 		global $wpdb;
 		$page = $wpdb->get_results("SELECT * FROM `". $wpdb->prefix ."posts` WHERE `ID` = ".$pageID.';',ARRAY_A);
@@ -92,7 +96,7 @@ class pagesinwidgets_page_section extends WP_Widget {
 		if($instance['titleEnable'] == 'true'){ ?>
 		<h4 class="widget-title widgettitle"><?php echo $page['post_title']; ?></h4>
 		<?php } ?>
-		<div class="homepage_section"><?php echo do_shortcode($page['post_content']); ?></div>
+		<div class="<?php echo (($instance['customCssClass'])?$instance['customCssClass']:'homepage_section'); ?>"><?php echo do_shortcode($page['post_content']); ?></div>
 		<?php
    		echo $after_widget;
 	}

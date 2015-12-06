@@ -1,6 +1,6 @@
 # Pages In Widgets
 
-**Contributors:** jayden-major, ramiy
+**Contributors:** jayden-major, ramiy, ethanpil
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
@@ -26,26 +26,45 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 ## Installation
 ### Install From WordPress Repository
 1 Find and Install & activate Pages In Widgets
+
 2 To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+
 3 The widget will ask you to select a page and if you want to display the page title
+
 4 Save the content for the selected page will now be included in the widget section
 
 ### Install Via Upload 
 1 Download the Pages In Widgets plugin from either wordpress.org of jaydenmajor.com/plugins
+
 2 Upload, Install & activate Pages In Widgets
+
 3 To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+
 4 The widget will ask you to select a page and if you want to display the page title
+
 5 Save the content for the selected page will now be included in the widget secti5
+
+### Install From Git Hub
+1 Download or clone from https://github.com/JaydenMajor/Pages-In-Widgets/
+
+2 The directoy pagesingwidgets is the you want to zip and upload or paste in you wp-plugins filder
+
+3 From this point on you can follow Install Via Upload Step 2 onward.
 
 ## Frequently Asked Questions
 * **Q** Can this plugin also insert post into widgets
 * **A** Not at this stage but if the feature is requested i can be enabled.
 
-* **Q** Why did you developed this plugin
+* **Q** Why did you develop this plugin
 * **A** I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
 
 ## Change Log
+
+### 1.4
+Realse Date: Nov 18, 2015
+
+*Added Custom class opton
 
 ### 1.3
 Release Date: Oct 16, 2015
