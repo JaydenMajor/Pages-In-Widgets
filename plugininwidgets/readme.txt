@@ -46,6 +46,7 @@ Realse Date: Dec 06, 2015
 
 * i18n: Use [translate.wordpress.org](https://translate.wordpress.org/) to translate the plugin.
 * i18n: Update textdomain, same as the plugin slug.
+* Add phpDocs.
 
 = 1.4 =
 Realse Date: Nov 18, 2015

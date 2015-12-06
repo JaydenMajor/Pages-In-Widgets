@@ -67,7 +67,8 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 Realse Date: Dec 06, 2015
 
 * i18n: Use translate.wordpress.org to translate the plugin.
-* Update textdomain, same as the plugin slug.
+* i18n: Update textdomain, same as the plugin slug.
+* Add phpDocs.
 
 ### 1.4
 
