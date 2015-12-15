@@ -6,7 +6,7 @@
 
 **Requires at least:** WordPress 3.0
 
-**Tested up to:** 4.3.1
+**Tested up to:** 4.4
 
 **License:** GPLv2
 
@@ -64,7 +64,7 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 ### 1.4
 Realse Date: Nov 18, 2015
 
-*Added Custom class opton
+* Added Custom class opton
 
 ### 1.3
 Release Date: Oct 16, 2015
