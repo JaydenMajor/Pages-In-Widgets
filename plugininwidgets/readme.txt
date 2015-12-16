@@ -3,7 +3,11 @@ Contributors: jayden-major, ramiy, ethanpil
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor
 Requires at least: 3.0
 Tested up to: 4.4
+<<<<<<< HEAD
+Stable tag: 1.5
+=======
 Stable tag: 1.4
+>>>>>>> refs/remotes/origin/master
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -29,27 +33,40 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 5 Save the content for the selected page will now be included in the widget secti5
 
 == Frequently Asked Questions ==
-* **Q.** Can this plugin also insert post into widgets
-* **A.** Not at this stage but if the feature is requested i can be enabled.
 
-* **Q.** Why did you developed this plugin
-* **A.** I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
+= Can this plugin also insert post into widgets? =
+Not at this stage but if the feature is requested i can be enabled.
+
+= Why did you developed this plugin? =
+I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
 == Screenshots ==
 1. Screenshot of the plugin working in a widget area.
 
 == Change Log ==
+
+= 1.5 =
+Realse Date: Dec 06, 2015
+
+* i18n: Use [translate.wordpress.org](https://translate.wordpress.org/) to translate the plugin.
+* i18n: Update textdomain, same as the plugin slug.
+* Add phpDocs.
+
 = 1.4 =
 Realse Date: Nov 18, 2015
 
+<<<<<<< HEAD
+* Added Custom class opton.
+=======
 * Added Custom class opton
+>>>>>>> refs/remotes/origin/master
 
 = 1.3 =
 Release Date: Oct 16, 2015
 
 * Security: Prevent direct access to php files.
 * Security: Prevent direct access to directory.
-* i18n support: Add translation functions.
+* i18n: Add translation functions.
 
 = 1.2.1 =
 * Changed widget title form Page Widget -> Pages In Widget.
