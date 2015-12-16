@@ -3,11 +3,7 @@ Contributors: jayden-major, ramiy, ethanpil
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor
 Requires at least: 3.0
 Tested up to: 4.4
-<<<<<<< HEAD
 Stable tag: 1.5
-=======
-Stable tag: 1.4
->>>>>>> refs/remotes/origin/master
 License: GPLv2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -55,11 +51,7 @@ Realse Date: Dec 06, 2015
 = 1.4 =
 Realse Date: Nov 18, 2015
 
-<<<<<<< HEAD
 * Added Custom class opton.
-=======
-* Added Custom class opton
->>>>>>> refs/remotes/origin/master
 
 = 1.3 =
 Release Date: Oct 16, 2015
