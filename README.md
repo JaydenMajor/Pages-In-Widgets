@@ -76,11 +76,7 @@ Realse Date: Dec 06, 2015
 
 Realse Date: Nov 18, 2015
 
-<<<<<<< HEAD
 * Added Custom class opton.
-=======
-* Added Custom class opton
->>>>>>> refs/remotes/origin/master
 
 ### 1.3
 
