@@ -2,6 +2,8 @@
 
 **Contributors:** jayden-major, ramiy, ethanpil
 
+**Version:** 1.5
+
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
 **Requires at least:** WordPress 3.0
