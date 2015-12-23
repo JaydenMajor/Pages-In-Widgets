@@ -26,7 +26,7 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 ## Installation
 
 ### Install From WordPress Repository
-1. Find and Install & activate Pages In Widgets
+1. Find and Install & activate Pages In Widgets - https://wordpress.org/plugins/pages-in-widgets/
 
 2. To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
 
