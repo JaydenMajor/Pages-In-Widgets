@@ -10,9 +10,9 @@
 
 **Tested up to:** 4.4
 
-**License:** GPLv2
+**License:** GPLv3
 
-**License URI:** https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+**License URI:** http://www.gnu.org/licenses/gpl.html
 
 Pages In Widgets is a plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
 
@@ -48,7 +48,7 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 ### Install From Git Hub
 1. Download or clone from https://github.com/JaydenMajor/Pages-In-Widgets/
 
-2. The directoy pagesingwidgets is the you want to zip and upload or paste in you wp-plugins filder
+2. The directoy pagesingwidgets is the you want to zip and upload or paste in you wp-plugins folder
 
 3. From this point on you can follow Install Via Upload Step 2 onward.
 
