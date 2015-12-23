@@ -4,8 +4,8 @@ Tags: Jayden major, widgets, custom home page, pages on widgets, page, page edit
 Requires at least: 3.0
 Tested up to: 4.4
 Stable tag: 1.5
-License: GPLv2
-License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
 
 Pages In Widgets is a simple plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
 
@@ -26,7 +26,7 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 2 Upload, Install & activate Pages In Widgets
 3 To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
 4 The widget will ask you to select a page and if you want to display the page title
-5 Save the content for the selected page will now be included in the widget secti5
+5 Save the content for the selected page will now be included in the widget sectiion
 
 == Frequently Asked Questions ==
 
