@@ -2,7 +2,7 @@
 
 **Contributors:** jayden-major, ramiy, ethanpil
 
-**Version:** 1.5
+**Version:** 1.6
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
@@ -63,6 +63,13 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 
 
 ## Change Log
+
+### 1.6
+Realse Date: TBD
+
+* Added Output Type Selection
+* By Default keep html page formatting i.e. previous version just removed some html tags
+
 
 ### 1.5
 

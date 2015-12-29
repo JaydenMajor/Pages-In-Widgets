@@ -3,7 +3,7 @@ Contributors: jayden-major, ramiy, ethanpil
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor
 Requires at least: 3.0
 Tested up to: 4.4
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -40,6 +40,12 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 1. Screenshot of the plugin working in a widget area.
 
 == Change Log ==
+
+= 1.6 =
+Realse Date: TBD
+
+* Added Output Type Selection
+* By Default keep html page formatting i.e. previous version just removed some html tags
 
 = 1.5 =
 Realse Date: Dec 06, 2015

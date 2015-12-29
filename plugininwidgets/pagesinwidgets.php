@@ -3,15 +3,14 @@
 Plugin Name: Pages In Widgets
 Plugin URI:  https://jaydenmajor.com/plugins
 Description: This plugin inserts the content of a page into a widget.
-Version:     1.5
+Version:     1.6
 Author:      Jayden Major
 Author URI:  https://jaydenmajor.com/
 Tags:        Jayden major, widgets, custom home page, pages on widgets, page, page editor
 Text Domain: pages-in-widgets
-Licence:     GNU General Public License (GPL) version 2 (#GPLv2)
-Licence URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Licence:     GNU General Public License (GPL) version 3 (#GPLv3)
+Licence URI: http://www.gnu.org/licenses/gpl.html
 */
-
 
 
 /*
@@ -24,8 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-
-
 /*
  * Plugin textdomain
  * Load plugin textdomain.
@@ -36,7 +33,6 @@ function pagesinwidgets_load_textdomain() {
 	load_plugin_textdomain( 'pages-in-widgets' );
 }
 add_action( 'plugins_loaded', 'pagesinwidgets_load_textdomain' );
-
 
 
 /*
@@ -64,14 +60,18 @@ class pagesinwidgets_page_section extends WP_Widget {
 		);
 
 	}
-
+/*
+* Output Type Selection
+* 
+* @Since 1.6
+*/
 	function form($instance){
 		$currentInstance = $instance;
 		$instance = wp_parse_args( (array) $instance, array('pageID' => '','titleEnable' => 'true') );
 		?>
 		<p style="font-style: italic;"><small><?php _e( 'Select the page here and then edit the page under the pages tab on the left.', 'pages-in-widgets' ); ?></small></p>
 		<p><label for="<?php echo $this->get_field_id('pageID'); ?>"><span style="float:left; width:100%;"><?php _e( 'Page:', 'pages-in-widgets' ); ?></span>
-		<select id="<?php echo $this->get_field_id('pageID'); ?>" name="<?php echo $this->get_field_name('pageID'); ?>">
+		<select class="large-text" style="width:100%;" id="<?php echo $this->get_field_id('pageID'); ?>" name="<?php echo $this->get_field_name('pageID'); ?>">
 			<?php
 				global $wpdb;
 				$pageList = $wpdb->get_results("SELECT * FROM `". $wpdb->prefix ."posts` WHERE `post_status` = 'publish' AND `post_type` = 'page'");
@@ -89,9 +89,18 @@ class pagesinwidgets_page_section extends WP_Widget {
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-yes"><?php _e( 'Yes:', 'pages-in-widgets' ); ?> <input type="radio" value="true" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-yes" <?php if($currentInstance['titleEnable'] == 'true'){echo 'checked="checked"';} ?>/></label>
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-no"><?php _e( 'No:', 'pages-in-widgets' ); ?> <input type="radio" value="false" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-no" <?php if($currentInstance['titleEnable'] == 'false'){echo 'checked="checked"';} ?>/></label></p>
 		
-		<p>	<label for="<?php echo $this->get_field_id('customCssClass'); ?>"><?php _e( 'CSS Class:', 'pages-in-widgets' ); ?></label>
-        <input id="<?php echo $this->get_field_id('customCssClass'); ?>" name="<?php echo $this->get_field_name('customCssClass'); ?>" value="<?php echo $currentInstance['customCssClass']; ?>">
+		<p>	<label for="<?php echo $this->get_field_id('customCssClass'); ?>"><?php _e( 'CSS Class:', 'pages-in-widgets' ); ?></label><br/>
+        <input class="large-text" id="<?php echo $this->get_field_id('customCssClass'); ?>" name="<?php echo $this->get_field_name('customCssClass'); ?>" value="<?php echo $currentInstance['customCssClass']; ?>">
         </p>
+
+        <p><label for="<?php echo $this->get_field_id('outputtype'); ?>"><?php _e( 'Output Type:', 'pages-in-widgets' ); ?></label><br/>
+        	<select class="large-text" style="width:100%;" id="<?php echo $this->get_field_id('outputtype'); ?>" name="<?php echo $this->get_field_name('outputtype'); ?>">
+        		<option value="normal" <?php if($currentInstance['outputtype'] == "normal"){echo 'selected=""';}?>><?php _e('Normal', 'pages-in-widgets' ); ?></option>
+        		<option value="plaintext" <?php if($currentInstance['outputtype'] == "plaintext"){echo 'selected=""';}?>><?php _e('Plain Text', 'pages-in-widgets' ); ?></option>
+        		<option value="forceptag" <?php if($currentInstance['outputtype'] == "forceptag"){echo 'selected=""';}?>><?php _e('Force P Tags', 'pages-in-widgets' ); ?></option>
+        	</select>
+        </p>
+        <br/>
 		<?php
 	}
 
@@ -100,6 +109,7 @@ class pagesinwidgets_page_section extends WP_Widget {
     	$instance['pageID'] = $new_instance['pageID'];
 		$instance['titleEnable'] = $new_instance['titleEnable'];
 		$instance['customCssClass'] = $new_instance['customCssClass'];
+		$instance['outputtype'] = $new_instance['outputtype'];
     	return $instance;
     }
 
@@ -108,6 +118,7 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$pageID = $instance['pageID'];
 		$titleEnable = $instance['titleEnable'];
 		$customCssClass = $instance['customCssClass'];
+		$outputType = $instance['outputtype'];
     	echo $before_widget;
 		global $wpdb;
 		$page = $wpdb->get_results("SELECT * FROM `". $wpdb->prefix ."posts` WHERE `ID` = ".$pageID.';',ARRAY_A);
@@ -115,7 +126,26 @@ class pagesinwidgets_page_section extends WP_Widget {
 		if($instance['titleEnable'] == 'true'){ ?>
 		<h4 class="widget-title widgettitle"><?php echo $page['post_title']; ?></h4>
 		<?php } ?>
-		<div class="<?php echo (($instance['customCssClass'])?$instance['customCssClass']:'homepage_section'); ?>"><?php echo do_shortcode($page['post_content']); ?></div>
+		<div class="<?php echo (($instance['customCssClass'])?$instance['customCssClass']:'homepage_section'); ?>">
+			<?php 
+			if($instance['outputtype'] == 'plaintext'){
+				echo strip_tags($page['post_content']);
+			}
+			else if($instance['outputtype'] == 'forceptags'){
+				$content = $page['post_content'];
+				$rsp = array("\r\n&nbsp;\r\n","\n&nbsp;\n","\r&nbsp;\r");
+				$content = str_replace($rsp,"</p><p>",$content);
+
+				$rsp2 = array("\r\n\r\n&nbsp;\r\n\r\n","\r\r&nbsp;\r\r","\n\n&nbsp;\n\n");
+				$content = str_replace($rsp,"</p><br/><p>",$content);
+
+				echo do_shortcode(apply_filters('the_content',"<p>"+$content+"</p>"));
+			}
+			else{
+				echo do_shortcode(apply_filters('the_content',$page['post_content']));
+			}
+			?>
+			</div>
 		<?php
    		echo $after_widget;
 	}
