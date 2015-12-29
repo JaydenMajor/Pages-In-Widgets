@@ -64,6 +64,13 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 
 ## Change Log
 
+### 1.6
+Realse Date: TBD
+
+* Added Output Type Selection
+* By Default keep html page formatting i.e. previous version just removed some html tags
+
+
 ### 1.5
 
 Realse Date: Dec 06, 2015
