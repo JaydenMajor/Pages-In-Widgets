@@ -60,7 +60,11 @@ class pagesinwidgets_page_section extends WP_Widget {
 		);
 
 	}
-
+/*
+* Output Type Selection
+* 
+* @Since 1.6
+*/
 	function form($instance){
 		$currentInstance = $instance;
 		$instance = wp_parse_args( (array) $instance, array('pageID' => '','titleEnable' => 'true') );
