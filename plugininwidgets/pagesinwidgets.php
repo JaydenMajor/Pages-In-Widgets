@@ -3,7 +3,7 @@
 Plugin Name: Pages In Widgets
 Plugin URI:  https://jaydenmajor.com/plugins
 Description: This plugin inserts the content of a page into a widget.
-Version:     1.5
+Version:     1.6
 Author:      Jayden Major
 Author URI:  https://jaydenmajor.com/
 Tags:        Jayden major, widgets, custom home page, pages on widgets, page, page editor
@@ -100,6 +100,7 @@ class pagesinwidgets_page_section extends WP_Widget {
     	$instance['pageID'] = $new_instance['pageID'];
 		$instance['titleEnable'] = $new_instance['titleEnable'];
 		$instance['customCssClass'] = $new_instance['customCssClass'];
+		$instance['outputtype'] = $new_instance['outputtype'];
     	return $instance;
     }
 
@@ -108,6 +109,7 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$pageID = $instance['pageID'];
 		$titleEnable = $instance['titleEnable'];
 		$customCssClass = $instance['customCssClass'];
+		$outputType = $instance['outputtype'];
     	echo $before_widget;
 		global $wpdb;
 		$page = $wpdb->get_results("SELECT * FROM `". $wpdb->prefix ."posts` WHERE `ID` = ".$pageID.';',ARRAY_A);
@@ -115,7 +117,9 @@ class pagesinwidgets_page_section extends WP_Widget {
 		if($instance['titleEnable'] == 'true'){ ?>
 		<h4 class="widget-title widgettitle"><?php echo $page['post_title']; ?></h4>
 		<?php } ?>
-		<div class="<?php echo (($instance['customCssClass'])?$instance['customCssClass']:'homepage_section'); ?>"><?php echo do_shortcode($page['post_content']); ?></div>
+		<div class="<?php echo (($instance['customCssClass'])?$instance['customCssClass']:'homepage_section'); ?>">
+			<?php echo do_shortcode(apply_filters('the_content',$page['post_content'])); ?>
+			</div>
 		<?php
    		echo $after_widget;
 	}
