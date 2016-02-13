@@ -1,9 +1,9 @@
 === Pages In Widgets ===
 Contributors: jayden-major, ramiy, ethanpil
-Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor
+Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
 Requires at least: 3.0
-Tested up to: 4.4
-Stable tag: 1.6
+Tested up to: 4.4.2
+Stable tag: 1.6.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -17,15 +17,22 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 == Installation ==
 = Install From WordPress Repository =
 1 Find and Install & activate Pages In Widgets
+
 2 To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+
 3 The widget will ask you to select a page and if you want to display the page title
+
 4 Save the content for the selected page will now be included in the widget section
 
 = Install Via Upload =
 1 Download the Pages In Widgets plugin from either wordpress.org of jaydenmajor.com/plugins
+
 2 Upload, Install & activate Pages In Widgets
+
 3 To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+
 4 The widget will ask you to select a page and if you want to display the page title
+
 5 Save the content for the selected page will now be included in the widget sectiion
 
 == Frequently Asked Questions ==
@@ -38,24 +45,30 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 
 == Screenshots ==
 1. Screenshot of the plugin working in a widget area.
+2. New updated screenshot of the widget options.
 
 == Change Log ==
 
+= 1.6.1 =
+Release Date: Feb 13, 2016
+* Updated Widget to add adisional checks.
+* Changed the way the plugin outputs data to display the page.
+
 = 1.6 =
-Realse Date: Dec 29, 2015
+Release Date: Dec 29, 2015
 
 * Added Output Type Selection
 * By Default keep html page formatting i.e. previous version just removed some html tags
 
 = 1.5 =
-Realse Date: Dec 06, 2015
+Release Date: Dec 06, 2015
 
 * i18n: Use [translate.wordpress.org](https://translate.wordpress.org/) to translate the plugin.
 * i18n: Update textdomain, same as the plugin slug.
 * Add phpDocs.
 
 = 1.4 =
-Realse Date: Nov 18, 2015
+Release Date: Nov 18, 2015
 
 * Added Custom class opton.
 
