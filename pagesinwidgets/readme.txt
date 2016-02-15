@@ -1,19 +1,23 @@
 === Pages In Widgets ===
 Contributors: jayden-major, ramiy, ethanpil
 Donate link: https://jaydenmajor.com/donate
-Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
+Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, post in widget, posts on widgets, website sections, post, post editor, post in widget section
 Requires at least: 3.0
 Tested up to: 4.4.2
 Stable tag: 1.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
-Pages In Widgets is a simple plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
+Pages In Widgets is a simple plugin that allows you to insert a the content of a page/post created in the normal WordPress pages interface into a widget. Allowing for a faster and easier websit for both the devloper and the other publishers.
 
 == Description ==
 Pages In Widgets is a plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
 
 This most helpful on theme where the from page is a serious of widget areas. By using this widget it allows you to edit widgets areas using the visual editor build into WordPress.
+
+The most common use for this plugin is to section on a site usually a one-pager site of some similar design, this plugin allow website devlopor to easily allow other not so techional users to update and edit parts of the website.
+
+One of the other uses for this plugin is to allow non techional user to update parts of their site that do not have a general customizable section e.g. Footor copyright or banner text.
 
 == Installation ==
 = Install From WordPress Repository =
@@ -32,7 +36,10 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 == Frequently Asked Questions ==
 
 = Can this plugin also insert post into widgets? =
-Not at this stage but if the feature is requested i can be enabled.
+This feature has been implemented in version 1.7 of the plugin.
+
+= Is there a way to include posts for custom post types into widgets? =
+Not at the moment but if requested this can be implemented.
 
 = Why did you developed this plugin? =
 I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
@@ -45,6 +52,8 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 = 1.7 =
 Release Date: TBD
 * Added Widget to allow inserting of posts into widgets areas
+* Added the ability to overide the page/post title with the widget its self.
+* Fixed issue that prevented users from seeing the page / post title in the widget area.
 
 = 1.6.1 =
 Release Date: Feb 13, 2016
@@ -95,6 +104,12 @@ Release Date: May 12, 2015
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.7 =
+Major Update. New features and other general changes in the version of the plugin.
+
+= 1.6.1 = 
+This version has better checks and valadations than older version.
 
 = 1.6 =
 Some users have had some problems with version 1.6 please use 1.6.1 or later.
