@@ -2,13 +2,13 @@
 
 **Contributors:** jayden-major, ramiy, ethanpil
 
-**Version:** 1.6.1
+**Version:** 1.7
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
 **Requires at least:** WordPress 3.0
 
-**Tested up to:** 4.4
+**Tested up to:** 4.5.1
 
 **License:** GPLv3
 
@@ -64,60 +64,51 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 
 ## Change Log
 
-### 1.6.1
-Release Date: Dec 29, 2015
+### 1.7
+Release Date: May 03, 2016
+* Added Widget to allow inserting of posts into widgets areas
+* Changed plugin structure to better support the above changes
+* Changed the way the plugin queries for pages and posts - Should help with some peoples problems with the plugin
 
+### 1.6.1
 * Added Output Type Selection
 * By Default keep html page formatting i.e. previous version just removed some html tags
 
 
 ### 1.6
 Realse Date: Dec 29, 2015
-
 * Added Output Type Selection
 * By Default keep html page formatting i.e. previous version just removed some html tags
 
 
 ### 1.5
-
 Realse Date: Dec 06, 2015
-
 * i18n: Use translate.wordpress.org to translate the plugin.
 * i18n: Update textdomain, same as the plugin slug.
 * Add phpDocs.
 
 ### 1.4
-
 Realse Date: Nov 18, 2015
-
 * Added Custom class opton.
 
 ### 1.3
-
 Release Date: Oct 16, 2015
-
 * Security: Prevent direct access to php files.
 * Security: Prevent direct access to directory.
 * i18n: Add translation functions.
 
 ### 1.2.1
-
 * Changed widget title form Page Widget -> Pages In Widget.
 
 ### 1.2
-
 Release Date: Aug 11, 2015
-
 * Bug Fix: Move away from using PHP 4 style constrictors - Needed for wordpress 4.3.
 
 ### 1.1
-
 Release Date: May 13, 2015
-
 * Bug Fix: Fixed issue were widget appeared to loose preferences. (No preferences were lost this was just a display error).
 
 ### 1.0
-
 Release Date: May 12, 2015
 
 * Initial release.
