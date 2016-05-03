@@ -47,7 +47,6 @@ Release Date: May 03, 2016
 * Added Widget to allow inserting of posts into widgets areas
 * Changed plugin structure to better support the above changes
 * Changed the way the plugin queries for pages and posts - Should help with some peoples problems with the plugin
-
 = 1.6.1 =
 * Updated Widget to add adisional checks.
 * Changed the way the plugin outputs data to display the page.
