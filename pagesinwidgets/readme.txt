@@ -1,9 +1,17 @@
 === Pages In Widgets ===
 Contributors: jayden-major, ramiy, ethanpil
+<<<<<<< HEAD
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
 Requires at least: 3.0
 Tested up to: 4.4.2
 Stable tag: 1.6.1
+=======
+Donate link: https://jaydenmajor.com/donate
+Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
+Requires at least: 3.0
+Tested up to: 4.4.2
+Stable tag: 1.7
+>>>>>>> 1.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -16,6 +24,7 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 
 == Installation ==
 = Install From WordPress Repository =
+<<<<<<< HEAD
 1 Find and Install & activate Pages In Widgets
 
 2 To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
@@ -34,6 +43,19 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 4 The widget will ask you to select a page and if you want to display the page title
 
 5 Save the content for the selected page will now be included in the widget sectiion
+=======
+1. Find and Install & activate Pages In Widgets
+2. To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+3. The widget will ask you to select a page and if you want to display the page title
+4. Save the content for the selected page will now be included in the widget section
+
+= Install Via Upload =
+1. Download the Pages In Widgets plugin from either wordpress.org of jaydenmajor.com/plugins
+2. Upload, Install & activate Pages In Widgets
+3. To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+4. The widget will ask you to select a page and if you want to display the page title
+5. Save the content for the selected page will now be included in the widget sectiion
+>>>>>>> 1.7
 
 == Frequently Asked Questions ==
 
@@ -48,6 +70,14 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 2. New updated screenshot of the widget options.
 
 == Change Log ==
+= 1.7 =
+Release Date: TBD
+* Added Widget to allow inserting of posts into widgets areas
+
+= 1.6.1 =
+Release Date: Feb 13, 2016
+* Updated Widget to add adisional checks.
+* Changed the way the plugin outputs data to display the page.
 
 = 1.6.1 =
 Release Date: Feb 13, 2016
@@ -96,3 +126,14 @@ Release Date: May 13, 2015
 Release Date: May 12, 2015
 
 * Initial release.
+
+== Upgrade Notice ==
+
+= 1.6 =
+Some users have had some problems with version 1.6 please use 1.6.1 or later.
+
+= 1.1=
+This version fixes the bugs in version 1.0 please update.
+
+= 1.0 =
+This version contains major bugs please use a newer version.

@@ -3,7 +3,11 @@
 Plugin Name: Pages In Widgets
 Plugin URI:  https://jaydenmajor.com/plugins
 Description: This plugin inserts the content of a page into a widget.
+<<<<<<< HEAD
 Version:     1.6.1
+=======
+Version:     1.7
+>>>>>>> 1.7
 Author:      Jayden Major
 Author URI:  https://jaydenmajor.com/
 Tags:        Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
