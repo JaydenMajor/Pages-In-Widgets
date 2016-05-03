@@ -1,0 +1,102 @@
+=== Pages In Widgets ===
+Contributors: jayden-major, ramiy, ethanpil
+Donate link: https://jaydenmajor.com/donate
+Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
+Requires at least: 3.0
+Tested up to: 4.5.1
+Stable tag: 1.7
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
+
+Pages In Widgets is a simple plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
+
+== Description ==
+Pages In Widgets is a plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
+
+This most helpful on theme where the from page is a serious of widget areas. By using this widget it allows you to edit widgets areas using the visual editor build into WordPress.
+
+== Installation ==
+= Install From WordPress Repository =
+1. Find and Install & activate Pages In Widgets
+2. To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+3. The widget will ask you to select a page and if you want to display the page title
+4. Save the content for the selected page will now be included in the widget section
+
+= Install Via Upload =
+1. Download the Pages In Widgets plugin from either wordpress.org of jaydenmajor.com/plugins
+2. Upload, Install & activate Pages In Widgets
+3. To use go to widgets and drag & drop the Pages In Widgets widget to the selected section
+4. The widget will ask you to select a page and if you want to display the page title
+5. Save the content for the selected page will now be included in the widget sectiion
+
+== Frequently Asked Questions ==
+
+= Can this plugin also insert post into widgets? =
+Not at this stage but if the feature is requested i can be enabled.
+
+= Why did you developed this plugin? =
+I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
+
+== Screenshots ==
+1. Screenshot of the plugin working in a widget area.
+2. New updated screenshot of the widget options.
+
+== Change Log ==
+= 1.7 =
+Release Date: May 03, 2016
+* Added Widget to allow inserting of posts into widgets areas
+* Changed plugin structure to better support the above changes
+* Changed the way the plugin queries for pages and posts - Should help with some peoples problems with the plugin
+
+= 1.6.1 =
+* Updated Widget to add adisional checks.
+* Changed the way the plugin outputs data to display the page.
+
+= 1.6 =
+Release Date: Dec 29, 2015
+* Added Output Type Selection
+* By Default keep html page formatting i.e. previous version just removed some html tags
+
+= 1.5 =
+Release Date: Dec 06, 2015
+* i18n: Use [translate.wordpress.org](https://translate.wordpress.org/) to translate the plugin.
+* i18n: Update textdomain, same as the plugin slug.
+* Add phpDocs.
+
+= 1.4 =
+Release Date: Nov 18, 2015
+* Added Custom class opton.
+
+= 1.3 =
+Release Date: Oct 16, 2015
+* Security: Prevent direct access to php files.
+* Security: Prevent direct access to directory.
+* i18n: Add translation functions.
+
+= 1.2.1 =
+* Changed widget title form Page Widget -> Pages In Widget.
+
+= 1.2 =
+Release Date: Aug 11, 2015
+* Bug Fix: Move away from using PHP 4 style constrictors - Needed for wordpress 4.3.
+
+= 1.1 =
+Release Date: May 13, 2015
+* Bug Fix: Fixed issue were widget appeared to loose preferences. (No preferences were lost this was just a display error).
+
+= 1.0 =
+Release Date: May 12, 2015
+* Initial release.
+
+== Upgrade Notice ==
+= 1.7 =
+Added Widget to allow inserting of posts into widgets areas
+
+= 1.6 =
+Some users have had some problems with version 1.6 please use 1.6.1 or later.
+
+= 1.1=
+This version fixes the bugs in version 1.0 please update.
+
+= 1.0 =
+This version contains major bugs please use a newer version.
