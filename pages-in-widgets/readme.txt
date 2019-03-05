@@ -3,7 +3,7 @@ Contributors: jayden-major, ramiy, ethanpil
 Donate link: https://jaydenmajor.com/donate
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
 Requires at least: 3.0
-Tested up to: 4.5.1
+Tested up to: 5.1
 Stable tag: 1.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
