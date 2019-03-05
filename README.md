@@ -8,7 +8,7 @@
 
 **Requires at least:** WordPress 3.0
 
-**Tested up to:** 4.5.1
+**Tested up to:** 5.1
 
 **License:** GPLv3
 
