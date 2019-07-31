@@ -3,8 +3,8 @@ Contributors: jayden-major, ramiy, ethanpil
 Donate link: https://jaydenmajor.com/donate
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
 Requires at least: 3.0
-Tested up to: 5.1
-Stable tag: 1.7
+Tested up to: 5.2.2
+Stable tag: 1.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -31,9 +31,6 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 
 == Frequently Asked Questions ==
 
-= Can this plugin also insert post into widgets? =
-Not at this stage but if the feature is requested i can be enabled.
-
 = Why did you developed this plugin? =
 I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
@@ -42,11 +39,17 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 2. New updated screenshot of the widget options.
 
 == Change Log ==
+= 1.8 =
+Release Date: July 31, 2019
+* Added ability to change heading Type.
+* Fixed some activation issues after updateing.
+
 = 1.7 =
 Release Date: May 03, 2016
 * Added Widget to allow inserting of posts into widgets areas
 * Changed plugin structure to better support the above changes
 * Changed the way the plugin queries for pages and posts - Should help with some peoples problems with the plugin
+
 = 1.6.1 =
 * Updated Widget to add adisional checks.
 * Changed the way the plugin outputs data to display the page.

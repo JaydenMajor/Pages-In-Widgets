@@ -2,13 +2,13 @@
 
 **Contributors:** jayden-major, ramiy, ethanpil
 
-**Version:** 1.7
+**Version:** 1.8
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
 
 **Requires at least:** WordPress 3.0
 
-**Tested up to:** 5.1
+**Tested up to:** 5.2.2
 
 **License:** GPLv3
 
@@ -55,14 +55,15 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 
 ## Frequently Asked Questions
 
-### Can this plugin also insert post into widgets?
-Not at this stage but if the feature is requested i can be enabled.
-
 ### Why did you develop this plugin?
 I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
 
 ## Change Log
+### 1.8
+Release Date: July 31, 2019
+* Added ability to change heading Type.
+* Fixed some activation issues after updateing.
 
 ### 1.7
 Release Date: May 03, 2016

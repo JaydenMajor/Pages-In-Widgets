@@ -40,6 +40,9 @@ class pagesinwidgets_post_section extends WP_Widget {
 		if(isset($currentInstance['outputtype']) == false){
 			$currentInstance['outputtype'] = "normal";
 		}
+		if(isset($currentInstance['titletype']) == false){
+			$currentInstance['titletype'] = "h2";
+		}
 		?>
 		<p style="font-style: italic;"><small><?php _e( 'Select the post here and then edit the post under the posts tab on the left.', 'pages-in-widgets' ); ?></small></p>
 		<p><label for="<?php echo $this->get_field_id('postID'); ?>"><span style="float:left; width:100%;"><?php _e( 'post:', 'pages-in-widgets' ); ?></span>
@@ -63,6 +66,18 @@ class pagesinwidgets_post_section extends WP_Widget {
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-yes"><?php _e( 'Yes:', 'pages-in-widgets' ); ?> <input type="radio" value="true" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-yes" <?php if($currentInstance['titleEnable'] == 'true'){echo 'checked="checked"';} ?>/></label>
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-no"><?php _e( 'No:', 'pages-in-widgets' ); ?> <input type="radio" value="false" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-no" <?php if($currentInstance['titleEnable'] == 'false'){echo 'checked="checked"';} ?>/></label></p>
 		
+		<p>	<label for="<?php echo $this->get_field_id('titletype'); ?>"><?php _e( 'Title Type:', 'pages-in-widgets' ); ?></label><br/>
+		<select class="large-text" id="<?php echo $this->get_field_id('titletype'); ?>" name="<?php echo $this->get_field_name('titletype'); ?>">
+			<option value="h1" <?php if($currentInstance['titletype'] == 'h1'){echo 'selected';}?>>H1</option>
+			<option value="h2" <?php if($currentInstance['titletype'] == 'h2'){echo 'selected';}?>>H2</option>
+			<option value="h3" <?php if($currentInstance['titletype'] == 'h3'){echo 'selected';}?>>H3</option>
+			<option value="h4" <?php if($currentInstance['titletype'] == 'h4'){echo 'selected';}?>>H4</option>
+			<option value="h5" <?php if($currentInstance['titletype'] == 'h5'){echo 'selected';}?>>H5</option>
+			<option value="h6" <?php if($currentInstance['titletype'] == 'h6'){echo 'selected';}?>>H6</option>
+			<option value="p" <?php if($currentInstance['titletype'] == 'p'){echo 'selected';}?>>P</option>
+		</select>
+		</p>
+
 		<p>	<label for="<?php echo $this->get_field_id('customCssClass'); ?>"><?php _e( 'CSS Class:', 'pages-in-widgets' ); ?></label><br/>
         <input class="large-text" id="<?php echo $this->get_field_id('customCssClass'); ?>" name="<?php echo $this->get_field_name('customCssClass'); ?>" value="<?php echo $currentInstance['customCssClass']; ?>">
         </p>
@@ -87,6 +102,7 @@ class pagesinwidgets_post_section extends WP_Widget {
 		$instance['titleEnable'] = $new_instance['titleEnable'];
 		$instance['customCssClass'] = $new_instance['customCssClass'];
 		$instance['outputtype'] = $new_instance['outputtype'];
+		$instance['titletype'] = $new_instance['titletype'];
     	return $instance;
     }
 
@@ -99,32 +115,38 @@ class pagesinwidgets_post_section extends WP_Widget {
 		$titleEnable = $instance['titleEnable'];
 		$customCssClass = $instance['customCssClass'];
 		$outputType = $instance['outputtype'];
+		if(isset($instance['titletype']) == false){
+			$instance['titletype'] = 'h2';
+		}
+		$titletype = $instance['titletype'];
     	echo $before_widget;
 		$args = array( 'p' => $postID );
 		$post = new WP_Query( $args );
-		$post = $post->the_post();
-		if($titleEnable == 'true'){ ?>
-		<h4 class="widget-title widgettitle"><?php echo the_title(); ?></h4>
-		<?php } ?>
-		<div class="<?php echo (($customCssClass)?$customCssClass:'homepost_section'); ?>">
-			<?php 
-			if($outputType == 'plaintext'){
-				echo strip_tags($post['post_content']);
-			}
-			else if($outputType == 'forceptags'){
-				$content = the_content();
-				$rsp = array("\r\n&nbsp;\r\n","\n&nbsp;\n","\r&nbsp;\r");
-				$content = str_replace($rsp,"</p><p>",$content);
-				$rsp2 = array("\r\n\r\n&nbsp;\r\n\r\n","\r\r&nbsp;\r\r","\n\n&nbsp;\n\n");
-				$content = str_replace($rsp,"</p><br/><p>",$content);
-				echo do_shortcode(apply_filters('the_content',"<p>"+$content+"</p>"));
-			}
-			else{
-				echo do_shortcode(apply_filters('the_content',$post['post_content']));
-			}
-			?>
-			</div>
-		<?php
+		
+		if($post->have_posts()) : $post->the_post();
+			if($titleEnable == 'true'){ ?>
+			<h4 class="widget-title widgettitle"><?php echo the_title(); ?></h4>
+			<?php } ?>
+			<div class="<?php echo (($customCssClass)?$customCssClass:'homepost_section'); ?>">
+				<?php 
+				$content = get_the_content();
+				if($outputType == 'plaintext'){
+					echo strip_tags($content);
+				}
+				else if($outputType == 'forceptags'){
+					$rsp = array("\r\n&nbsp;\r\n","\n&nbsp;\n","\r&nbsp;\r");
+					$content = str_replace($rsp,"</p><p>",$content);
+					$rsp2 = array("\r\n\r\n&nbsp;\r\n\r\n","\r\r&nbsp;\r\r","\n\n&nbsp;\n\n");
+					$content = str_replace($rsp,"</p><br/><p>",$content);
+					echo do_shortcode(apply_filters('the_content',"<p>"+$content+"</p>"));
+				}
+				else{
+					echo do_shortcode(apply_filters('the_content',$content));
+				}
+				?>
+				</div>
+			<?php
+		endif;
    		echo $after_widget;
    		wp_reset_postdata();
 	}
