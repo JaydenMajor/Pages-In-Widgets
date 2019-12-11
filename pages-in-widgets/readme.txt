@@ -1,6 +1,6 @@
 === Pages In Widgets ===
 Contributors: jayden-major, ramiy, ethanpil, kzeni
-Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, filter page content
+Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, filter page content, filter page images
 Requires at least: 3.5
 Tested up to: 5.3
 Stable tag: 1.9
