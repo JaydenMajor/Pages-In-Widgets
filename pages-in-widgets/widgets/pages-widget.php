@@ -143,6 +143,8 @@ class pagesinwidgets_page_section extends WP_Widget {
 */
 	function update($new_instance, $old_instance){
    		$instance = $old_instance;
+		$post = get_post($new_instance['pageID']);
+		$instance['title'] = $post['post_title'];
     	$instance['pageID'] = $new_instance['pageID'];
 		$instance['titleEnable'] = $new_instance['titleEnable'];
 		$instance['customCssClass'] = $new_instance['customCssClass'];
