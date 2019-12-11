@@ -143,8 +143,14 @@ class pagesinwidgets_post_section extends WP_Widget {
 */
 	function update($new_instance, $old_instance){
    		$instance = $old_instance;
-		$post = get_post($new_instance['pageID']);
-		$instance['title'] = $post['post_title'];
+		
+		$args = array( 'page_id' => $new_instance['pageID'] );
+		$post = new WP_Query( $args );
+		if($post->have_posts()):
+			$post->the_post();
+			$instance['title'] = get_the_title();
+		endif;
+		
     	$instance['postID'] = $new_instance['postID'];
 		$instance['titleEnable'] = $new_instance['titleEnable'];
 		$instance['customCssClass'] = $new_instance['customCssClass'];
