@@ -2,7 +2,7 @@
 
 **Contributors:** jayden-major, ramiy, ethanpil, kzeni
 
-**Version:** 1.9
+**Version:** 1.9.1
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor, filter page content, filter page images
 
