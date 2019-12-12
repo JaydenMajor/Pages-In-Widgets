@@ -22,7 +22,7 @@ Pages In Widgets is a plugin that allows you to insert a the content of a page c
 
 This most helpful on theme where the from page is a serious of widget areas. By using this widget it allows you to edit widgets areas using the visual editor build into WordPress.
 
-This plugin is open source (GPLv3), any changes can be contributed at https://github.com/JaydenMajor/Pages-In-Widgets
+This plugin is open source (GPLv3), any changes can be contributed at [https://github.com/JaydenMajor/Pages-In-Widgets](https://github.com/JaydenMajor/Pages-In-Widgets)
 
 ## Installation
 
@@ -65,8 +65,8 @@ Yes. There are two filters for each posts and pages output. For content `postsin
 ## Change Log
 ### 1.9
 Release Date: December 12, 2019
-* Added Filters for both content and images.
-* Thanks to kzeni for provideing this update.
+* Added filters and widget options for both content output and images.
+* Thanks to @kzeni for providing this update.
 
 ### 1.8
 Release Date: July 31, 2019
