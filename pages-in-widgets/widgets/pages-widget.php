@@ -12,7 +12,9 @@ function pagesinwidgets_pages() {
 class pagesinwidgets_page_section extends WP_Widget {
 
 	function __construct(){
-		parent::__construct('pagesinwidgets_page_section',__( 'Pages In Widgets', 'pages-in-widgets' ),
+		parent::__construct(
+		'pagesinwidgets_page_section',
+		__( 'Pages In Widgets', 'pages-in-widgets' ),
 			array(
 				'description' => __( 'A general layout for page sections.', 'pages-in-widgets' ),
 				'classname'   => 'pagesinwidgets_page_section'
@@ -26,8 +28,9 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$currentInstance = $instance;
 		$instance = wp_parse_args( (array) $instance, array('pageID' => '','titleEnable' => 'true') );
 		if(isset($currentInstance['title']) == false){
-			$currentInstance['title'] = "";
+			$currentInstance['title'] = "New Page";
 		}
+		$title = $currentInstance['title'];
 		if(isset($currentInstance['pageID']) == false){
 			$currentInstance['pageID'] = 1;
 		}
@@ -39,6 +42,15 @@ class pagesinwidgets_page_section extends WP_Widget {
 		}
 		if(isset($currentInstance['outputtype']) == false){
 			$currentInstance['outputtype'] = "normal";
+		}
+		if(isset($currentInstance['outputcontent']) == false){
+			$currentInstance['outputcontent'] = "content";
+		}
+		if(isset($currentInstance['imageposition']) == false){
+			$currentInstance['imageposition'] = 'none';
+		}
+		if(isset($currentInstance['imagesize']) == false){
+			$currentInstance['imagesize'] = 'thumbnail';
 		}
 		if(isset($currentInstance['titletype']) == false){
 			$currentInstance['titletype'] = "h2";
@@ -60,12 +72,12 @@ class pagesinwidgets_page_section extends WP_Widget {
 				wp_reset_postdata();
 			?>
 		</select>
-		</label></p>	
+		</label></p>
 		<p><label for="<?php echo $this->get_field_id('titleEnable'); ?>-yes"><span style="width:100%; float:left;"><?php _e( 'Show Page Title:', 'pages-in-widgets' ); ?></span></label>
-		
+
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-yes"><?php _e( 'Yes:', 'pages-in-widgets' ); ?> <input type="radio" value="true" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-yes" <?php if($currentInstance['titleEnable'] == 'true'){echo 'checked="checked"';} ?>/></label>
 		<label for="<?php echo $this->get_field_id('titleEnable'); ?>-no"><?php _e( 'No:', 'pages-in-widgets' ); ?> <input type="radio" value="false" name="<?php echo $this->get_field_name('titleEnable'); ?>" id="<?php echo $this->get_field_id('titleEnable'); ?>-no" <?php if($currentInstance['titleEnable'] == 'false'){echo 'checked="checked"';} ?>/></label></p>
-		
+
 		<p>	<label for="<?php echo $this->get_field_id('titletype'); ?>"><?php _e( 'Title Type:', 'pages-in-widgets' ); ?></label><br/>
 		<select class="large-text" id="<?php echo $this->get_field_id('titletype'); ?>" name="<?php echo $this->get_field_name('titletype'); ?>">
 			<option value="h1" <?php if($currentInstance['titletype'] == 'h1'){echo 'selected';}?>>H1</option>
@@ -89,6 +101,42 @@ class pagesinwidgets_page_section extends WP_Widget {
         		<option value="forceptag" <?php if($currentInstance['outputtype'] == "forceptag"){echo 'selected=""';}?>><?php _e('Force P Tags', 'pages-in-widgets' ); ?></option>
         	</select>
         </p>
+
+		<p><label for="<?php echo $this->get_field_id('outputcontent'); ?>"><?php _e( 'Content:', 'pages-in-widgets' ); ?></label><br/>
+			<select class="large-text" style="width:100%;" id="<?php echo $this->get_field_id('outputcontent'); ?>" name="<?php echo $this->get_field_name('outputcontent'); ?>">
+				<option value="content" <?php if($currentInstance['outputcontent'] == "content"){echo 'selected=""';}?>><?php _e('Content', 'pages-in-widgets' ); ?></option>
+				<option value="excerpt" <?php if($currentInstance['outputcontent'] == "excerpt"){echo 'selected=""';}?>><?php _e('Excerpt', 'pages-in-widgets' ); ?></option>
+			</select>
+		</p>
+
+		<p><label for="<?php echo $this->get_field_id('imageposition'); ?>"><?php _e( 'Image Position:', 'pages-in-widgets' ); ?></label><br/>
+			<select class="large-text" style="width:100%;" id="<?php echo $this->get_field_id('imageposition'); ?>" name="<?php echo $this->get_field_name('imageposition'); ?>">
+				<option value="none" <?php if($currentInstance['imageposition'] == "none"){echo 'selected=""';}?>><?php _e('None', 'pages-in-widgets' ); ?></option>
+				<option value="above-title" <?php if($currentInstance['imageposition'] == "above-title"){echo 'selected=""';}?>><?php _e('Above Title', 'pages-in-widgets' ); ?></option>
+				<option value="above-content" <?php if($currentInstance['imageposition'] == "above-content"){echo 'selected=""';}?>><?php _e('Above Content', 'pages-in-widgets' ); ?></option>
+				<option value="below-content" <?php if($currentInstance['imageposition'] == "below-content"){echo 'selected=""';}?>><?php _e('Below Content', 'pages-in-widgets' ); ?></option>
+			</select>
+		</p>
+		<?php
+		global $_wp_additional_image_sizes;
+		$image_sizes = array();
+		$default_image_sizes = get_intermediate_image_sizes();
+		foreach ( $default_image_sizes as $size ) {
+			$image_sizes[ $size ][ 'width' ] = intval( get_option( "{$size}_size_w" ) );
+			$image_sizes[ $size ][ 'height' ] = intval( get_option( "{$size}_size_h" ) );
+			$image_sizes[ $size ][ 'crop' ] = get_option( "{$size}_crop" ) ? get_option( "{$size}_crop" ) : false;
+		}
+		if ( isset( $_wp_additional_image_sizes ) && count( $_wp_additional_image_sizes ) ) {
+			$image_sizes = array_merge( $image_sizes, $_wp_additional_image_sizes );
+		}
+		?>
+		<p><label for="<?php echo $this->get_field_id('imagesize'); ?>"><?php _e( 'Image Size:', 'pages-in-widgets' ); ?></label><br/>
+			<select class="large-text" style="width:100%;" id="<?php echo $this->get_field_id('imagesize'); ?>" name="<?php echo $this->get_field_name('imagesize'); ?>">
+				<?php foreach ( $image_sizes as $size_name => $size_atts ): ?>
+				<option value="<?php echo $size_name; ?>" <?php if($currentInstance['imagesize'] == $size_name){echo 'selected=""';}?>><?php echo $size_name; ?></option>
+				<?php endforeach; ?>
+			</select>
+		</p>
         <br/>
 		<?php
 	}
@@ -98,10 +146,18 @@ class pagesinwidgets_page_section extends WP_Widget {
 */
 	function update($new_instance, $old_instance){
    		$instance = $old_instance;
+		
+		//,$output = 'ARRAY_A' ,$output = 'ARRAY_A'
+		$postI = get_post(intval($new_instance['pageID']));
+		$instance['title'] = $postI->post_title;
+		
     	$instance['pageID'] = $new_instance['pageID'];
 		$instance['titleEnable'] = $new_instance['titleEnable'];
 		$instance['customCssClass'] = $new_instance['customCssClass'];
 		$instance['outputtype'] = $new_instance['outputtype'];
+		$instance['outputcontent'] = $new_instance['outputcontent'];
+		$instance['imageposition'] = $new_instance['imageposition'];
+		$instance['imagesize'] = $new_instance['imagesize'];
 		$instance['titletype'] = $new_instance['titletype'];
     	return $instance;
     }
@@ -115,6 +171,9 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$titleEnable = $instance['titleEnable'];
 		$customCssClass = $instance['customCssClass'];
 		$outputType = $instance['outputtype'];
+		$outputContent = $instance['outputcontent'];
+		$imagePosition = $instance['imageposition'];
+		$imageSize = $instance['imagesize'];
 		if(isset($instance['titletype']) == false){
 			$instance['titletype'] = 'h2';
 		}
@@ -123,13 +182,23 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$args = array( 'page_id' => $pageID );
 		$page = new WP_Query( $args );
 		if($page->have_posts()) : $page->the_post();
+			if($imagePosition == 'above-title'){
+				apply_filters('pagesinwidgets_image',get_the_post_thumbnail($pageID,$imageSize));
+			}
 			if($titleEnable == 'true'){
-				echo '<'.$titletype . ' class="widget-title widgettitle">' . get_the_title() .'</'.$titletype.'>'; 
+				echo '<'.$titletype . ' class="widget-title widgettitle">' . get_the_title() .'</'.$titletype.'>';
 			}
 			?>
 			<div class="<?php echo (($customCssClass)?$customCssClass:'homepage_section'); ?>">
 				<?php
-				$content = get_the_content();
+				if($imagePosition == 'above-content'){
+					apply_filters('pagesinwidgets_image',get_the_post_thumbnail($pageID,$imageSize));
+				}
+				if($outputContent == 'excerpt'){
+					$content = apply_filters('pagesinwidgets_content',get_the_excerpt());
+				}else{
+					$content = apply_filters('pagesinwidgets_content',get_the_content());
+				}
 				if($outputType == 'plaintext'){
 					echo strip_tags($content);
 				}
@@ -143,12 +212,15 @@ class pagesinwidgets_page_section extends WP_Widget {
 				else{
 					echo do_shortcode(apply_filters('the_content',$content));
 				}
+				if($imagePosition == 'below-content'){
+					apply_filters('pagesinwidgets_image',get_the_post_thumbnail($pageID,$imageSize));
+				}
 				?>
 				</div>
 			<?php
 		endif;
-   		echo $after_widget;
-   		wp_reset_postdata();
+		echo $after_widget;
+		wp_reset_postdata();
 	}
 
 }

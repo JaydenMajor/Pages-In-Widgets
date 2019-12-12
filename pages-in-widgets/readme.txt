@@ -1,10 +1,9 @@
 === Pages In Widgets ===
-Contributors: jayden-major, ramiy, ethanpil
-Donate link: https://jaydenmajor.com/donate
-Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section
-Requires at least: 3.0
-Tested up to: 5.2.2
-Stable tag: 1.8
+Contributors: jayden-major, ramiy, ethanpil, kzeni
+Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, filter page content, filter page images
+Requires at least: 3.5
+Tested up to: 5.3
+Stable tag: 1.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -14,6 +13,8 @@ Pages In Widgets is a simple plugin that allows you to insert a the content of a
 Pages In Widgets is a plugin that allows you to insert a the content of a page created in the normal WordPress pages interface into a widget.
 
 This most helpful on theme where the from page is a serious of widget areas. By using this widget it allows you to edit widgets areas using the visual editor build into WordPress.
+
+This plugin is open source (GPLv3), any changes can be contributed at https://github.com/JaydenMajor/Pages-In-Widgets
 
 == Installation ==
 = Install From WordPress Repository =
@@ -34,11 +35,19 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 = Why did you developed this plugin? =
 I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
+= Can i use filters to change the plugin output? =
+Yes. There are two filters for each posts and pages output. For content `postsinwidgets_content` and `pagesinwidgets_content` as well as `pagesinwidgets_image` and `postsinwidgets_image` for filtering images.
+
 == Screenshots ==
 1. Screenshot of the plugin working in a widget area.
 2. New updated screenshot of the widget options.
 
 == Change Log ==
+= 1.9 =
+Release Date: December 12, 2019
+* Added Filters for both content and images.
+* Thanks to kzeni for provideing this update.
+
 = 1.8 =
 Release Date: July 31, 2019
 * Added ability to change heading Type.
@@ -91,6 +100,9 @@ Release Date: May 12, 2015
 * Initial release.
 
 == Upgrade Notice ==
+= 1.9 =
+Added filters for both post and page, content and images.
+
 = 1.7 =
 Added Widget to allow inserting of posts into widgets areas
 

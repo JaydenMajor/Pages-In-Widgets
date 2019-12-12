@@ -1,14 +1,14 @@
 # Pages In Widgets
 
-**Contributors:** jayden-major, ramiy, ethanpil
+**Contributors:** jayden-major, ramiy, ethanpil, kzeni
 
-**Version:** 1.8
+**Version:** 1.9
 
-**Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor
+**Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor, filter page content, filter page images
 
-**Requires at least:** WordPress 3.0
+**Requires at least:** WordPress 3.5
 
-**Tested up to:** 5.2.2
+**Tested up to:** 5.3
 
 **License:** GPLv3
 
@@ -22,6 +22,7 @@ Pages In Widgets is a plugin that allows you to insert a the content of a page c
 
 This most helpful on theme where the from page is a serious of widget areas. By using this widget it allows you to edit widgets areas using the visual editor build into WordPress.
 
+This plugin is open source (GPLv3), any changes can be contributed at https://github.com/JaydenMajor/Pages-In-Widgets
 
 ## Installation
 
@@ -58,8 +59,15 @@ This most helpful on theme where the from page is a serious of widget areas. By 
 ### Why did you develop this plugin?
 I developed this plugin because i found that i was writing HTML in text widgets and the sites needed to be edited by non technical people and inserting a page into a widget was the easiest way.
 
+### Can i use filters to change the plugin output?
+Yes. There are two filters for each posts and pages output. For content `postsinwidgets_content` and `pagesinwidgets_content` as well as `pagesinwidgets_image` and `postsinwidgets_image` for filtering images.
 
 ## Change Log
+### 1.9
+Release Date: December 12, 2019
+* Added Filters for both content and images.
+* Thanks to kzeni for provideing this update.
+
 ### 1.8
 Release Date: July 31, 2019
 * Added ability to change heading Type.
@@ -75,12 +83,10 @@ Release Date: May 03, 2016
 * Added Output Type Selection
 * By Default keep html page formatting i.e. previous version just removed some html tags
 
-
 ### 1.6
 Realse Date: Dec 29, 2015
 * Added Output Type Selection
 * By Default keep html page formatting i.e. previous version just removed some html tags
-
 
 ### 1.5
 Realse Date: Dec 06, 2015
