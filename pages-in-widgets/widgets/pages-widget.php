@@ -12,7 +12,9 @@ function pagesinwidgets_pages() {
 class pagesinwidgets_page_section extends WP_Widget {
 
 	function __construct(){
-		parent::__construct('pagesinwidgets_page_section',__( 'Pages In Widgets', 'pages-in-widgets' ),
+		parent::__construct(
+		'pagesinwidgets_page_section',
+		__( 'Pages In Widgets', 'pages-in-widgets' ),
 			array(
 				'description' => __( 'A general layout for page sections.', 'pages-in-widgets' ),
 				'classname'   => 'pagesinwidgets_page_section'
@@ -26,8 +28,9 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$currentInstance = $instance;
 		$instance = wp_parse_args( (array) $instance, array('pageID' => '','titleEnable' => 'true') );
 		if(isset($currentInstance['title']) == false){
-			$currentInstance['title'] = "";
+			$currentInstance['title'] = "New Page";
 		}
+		$title = $currentInstance['title'];
 		if(isset($currentInstance['pageID']) == false){
 			$currentInstance['pageID'] = 1;
 		}
@@ -191,7 +194,7 @@ class pagesinwidgets_page_section extends WP_Widget {
 				if($imagePosition == 'above-content'){
 					apply_filters('pagesinwidgets_image',get_the_post_thumbnail($pageID,$imageSize));
 				}
-				if(outputContent == 'excerpt'){
+				if($outputContent == 'excerpt'){
 					$content = apply_filters('pagesinwidgets_content',get_the_excerpt());
 				}else{
 					$content = apply_filters('pagesinwidgets_content',get_the_content());
