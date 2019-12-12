@@ -195,7 +195,7 @@ class pagesinwidgets_post_section extends WP_Widget {
 
 		if($post->have_posts()) : $post->the_post();
 			if($imagePosition == 'above-title'){
-				apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
+				echo apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
 			}
 			if($titleEnable == 'true'){ ?>
 			<h4 class="widget-title widgettitle"><?php echo the_title(); ?></h4>
@@ -203,7 +203,7 @@ class pagesinwidgets_post_section extends WP_Widget {
 			<div class="<?php echo (($customCssClass)?$customCssClass:'homepost_section'); ?>">
 				<?php
 				if($imagePosition == 'above-content'){
-					apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
+					echo apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
 				}
 				if($outputContent == 'excerpt'){
 					$content = apply_filters('postsinwidgets_content',get_the_excerpt());
@@ -224,7 +224,7 @@ class pagesinwidgets_post_section extends WP_Widget {
 					echo do_shortcode(apply_filters('the_content',$content));
 				}
 				if($imagePosition == 'below-content'){
-					apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
+					echo apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
 				}
 				?>
 				</div>
