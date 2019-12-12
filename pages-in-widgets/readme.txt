@@ -3,7 +3,7 @@ Contributors: jayden-major, ramiy, ethanpil, kzeni
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, filter page content, filter page images
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -43,6 +43,10 @@ Yes. There are two filters for each posts and pages output. For content `postsin
 2. New updated screenshot of the widget options.
 
 == Change Log ==
+= 1.9.2 =
+Release Date: December 13, 2019
+* Bug Fix - Fixed an issue were the image output wasn't being output.
+
 = 1.9.1 = 
 Release Date: December 12, 2019
 * Hot Fix - Bug that would have required to open the widget and save. Re saveing widgets no longer required.
