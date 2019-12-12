@@ -171,9 +171,19 @@ class pagesinwidgets_page_section extends WP_Widget {
 		$titleEnable = $instance['titleEnable'];
 		$customCssClass = $instance['customCssClass'];
 		$outputType = $instance['outputtype'];
+		if(isset($instance['outputcontent']) == false){
+			$instance['outputcontent'] = 'excerpt';
+		}
 		$outputContent = $instance['outputcontent'];
+		if(isset($instance['imageposition']) == false){
+			$instance['imageposition'] = 'none';
+		}
 		$imagePosition = $instance['imageposition'];
+		if(isset($instance['imagesize']) == false){
+			$instance['imagesize'] = 'thumbnail';
+		}
 		$imageSize = $instance['imagesize'];
+		
 		if(isset($instance['titletype']) == false){
 			$instance['titletype'] = 'h2';
 		}

@@ -3,7 +3,7 @@ Contributors: jayden-major, ramiy, ethanpil, kzeni
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, filter page content, filter page images
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.9
+Stable tag: 1.9.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -14,7 +14,7 @@ Pages In Widgets is a plugin that allows you to insert a the content of a page c
 
 This most helpful on theme where the from page is a serious of widget areas. By using this widget it allows you to edit widgets areas using the visual editor build into WordPress.
 
-This plugin is open source (GPLv3), any changes can be contributed at https://github.com/JaydenMajor/Pages-In-Widgets
+This plugin is open source (GPLv3), any changes can be contributed at [https://github.com/JaydenMajor/Pages-In-Widgets](https://github.com/JaydenMajor/Pages-In-Widgets)
 
 == Installation ==
 = Install From WordPress Repository =
@@ -43,10 +43,14 @@ Yes. There are two filters for each posts and pages output. For content `postsin
 2. New updated screenshot of the widget options.
 
 == Change Log ==
+= 1.9.1 = 
+Release Date: December 12, 2019
+* Hot Fix - Bug that would have required to open the widget and save. Re saveing widgets no longer required.
+
 = 1.9 =
 Release Date: December 12, 2019
 * Added Filters for both content and images.
-* Thanks to kzeni for provideing this update.
+* Thanks to @kzeni for provideing this update.
 
 = 1.8 =
 Release Date: July 31, 2019

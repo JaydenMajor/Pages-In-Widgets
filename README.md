@@ -63,6 +63,10 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 Yes. There are two filters for each posts and pages output. For content `postsinwidgets_content` and `pagesinwidgets_content` as well as `pagesinwidgets_image` and `postsinwidgets_image` for filtering images.
 
 ## Change Log
+### 1.9.1
+Release Date: December 12, 2019
+* Hot Fix - Bug that would have required to open the widget and save. Re saveing widgets no longer required.
+
 ### 1.9
 Release Date: December 12, 2019
 * Added filters and widget options for both content output and images.
