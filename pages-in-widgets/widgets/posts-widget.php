@@ -197,9 +197,9 @@ class pagesinwidgets_post_section extends WP_Widget {
 			if($imagePosition == 'above-title'){
 				echo apply_filters('postsinwidgets_image',get_the_post_thumbnail($postID,$imageSize));
 			}
-			if($titleEnable == 'true'){ ?>
-			<h4 class="widget-title widgettitle"><?php echo the_title(); ?></h4>
-			<?php } ?>
+			if($titleEnable == 'true'){
+				echo '<'.$titletype . ' class="widget-title widgettitle">' . get_the_title() .'</'.$titletype.'>';
+			} ?>
 			<div class="<?php echo (($customCssClass)?$customCssClass:'homepost_section'); ?>">
 				<?php
 				if($imagePosition == 'above-content'){
