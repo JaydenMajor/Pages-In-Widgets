@@ -2,7 +2,7 @@
 
 **Contributors:** jayden-major, ramiy, ethanpil, kzeni
 
-**Version:** 1.9.2
+**Version:** 1.9.3
 
 **Tags:** Jayden major, widgets, custom home page, pages on widgets, page, page editor, filter page content, filter page images
 
@@ -63,6 +63,11 @@ I developed this plugin because i found that i was writing HTML in text widgets 
 Yes. There are two filters for each posts and pages output. For content `postsinwidgets_content` and `pagesinwidgets_content` as well as `pagesinwidgets_image` and `postsinwidgets_image` for filtering images.
 
 ## Change Log
+### 1.9.3
+Release Date: December 17, 2019
+* Bug Fix - Fixed an issue were the output of the post title would be an h4 even when configured otherwise. - This bug weas only posts and not for pages.
+
+
 ### 1.9.2
 Release Date: December 13, 2019
 * Bug Fix - Fixed an issue were the image output wasn't being output.
