@@ -67,7 +67,6 @@ Yes. There are two filters for each posts and pages output. For content `postsin
 Release Date: December 17, 2019
 * Bug Fix - Fixed an issue were the output of the post title would be an h4 even when configured otherwise. - This bug weas only posts and not for pages.
 
-
 ### 1.9.2
 Release Date: December 13, 2019
 * Bug Fix - Fixed an issue were the image output wasn't being output.
