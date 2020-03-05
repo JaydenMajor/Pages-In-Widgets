@@ -1,9 +1,9 @@
 === Pages In Widgets ===
-Contributors: jayden-major, ramiy, ethanpil, kzeni
+Contributors: jayden-major, ramiy, ethanpil, kzeni, Jeroen-1978
 Tags: Jayden major, widgets, custom home page, pages on widgets, page, page editor, one page section, page in widget section, filter page content, filter page images
 Requires at least: 3.5
 Tested up to: 5.3
-Stable tag: 1.9.3
+Stable tag: 1.9.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -43,6 +43,10 @@ Yes. There are two filters for each posts and pages output. For content `postsin
 2. New updated screenshot of the widget options.
 
 == Change Log ==
+= 1.9.4 =
+Release Data: March 6, 2020
+* Feature - Include the option to sho private posts in the posts in pages widget
+
 = 1.9.3 =
 Release Date: December 17, 2019
 * Bug Fix - Fixed an issue were the output of the post title would be an h4 even when configured otherwise. - This bug weas only posts and not for pages.
