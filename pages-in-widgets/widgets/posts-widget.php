@@ -60,7 +60,7 @@ class pagesinwidgets_post_section extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('postID'); ?>"><span style="float:left; width:100%;"><?php _e( 'post:', 'pages-in-widgets' ); ?></span>
 		<select class="large-text" style="width:100%;" id="<?php echo $this->get_field_id('postID'); ?>" name="<?php echo $this->get_field_name('postID'); ?>">
 			<?php
-				$args = array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_post' => -1 );
+				$args = array( 'post_type' => 'post', 'post_status' => array('publish', 'private'), 'posts_per_post' => -1 );
 				$postList = new WP_Query( $args );
 				while ( $postList->have_posts() ){
 					$postList->the_post();
